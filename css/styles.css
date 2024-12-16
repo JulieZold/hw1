@@ -10,7 +10,7 @@
 
 /* ใช้ฟอนต์ Prompt เป็นค่าเริ่มต้น */
 body {
-  font-family: 'Prompt', sans-serif;
+  font-family: 'Prompt', prompt;
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;

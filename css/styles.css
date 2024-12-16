@@ -1,121 +1,129 @@
-/* ฟอนต์ Prompt */
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap');
+/* นำเข้าฟอนต์ Prompt */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap');
 
-/* รูปแบบพื้นฐาน */
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ใช้ฟอนต์ Prompt เป็นค่าเริ่มต้น */
 body {
-    font-family: 'Prompt', sans-serif;
-    background-color: #f4f4f4; /* สีพื้นหลังเดิม */
-    color: #333; /* สีฟอนต์เดิม */
-    margin: 0;
-    padding: 0;
+  font-family: 'Prompt', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-h1, h2 {
-    color: #333; /* สีฟอนต์เดิม */
+/* การตั้งค่าหัวข้อ */
+h1, h2, h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
 }
 
-/* ฟอร์ม */
-form {
-    background-color: white;
-    padding: 20px;
-    margin: 30px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 0;
 }
 
-/* กลุ่มฟอร์ม */
-.form-group {
-    margin-bottom: 20px;
+h2 {
+  font-size: 1.8em;
+  font-weight: 500;
+  margin-top: 20px;
 }
 
-/* ป้ายชื่อ */
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #333; /* สีฟอนต์เดิม */
+/* ลิงก์ */
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-/* ช่องกรอกข้อมูล */
-input[type="text"], input[type="email"], input[type="tel"], textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-    margin-bottom: 8px;
+a:hover {
+  color: #2c3e50;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
-    border-color: #3498db; /* สีฟอร์มเมื่อ focus */
-    outline: none;
-}
-
-/* ข้อความช่วยเหลือ */
-small {
-    font-size: 0.9em;
-    color: #888;
-}
-
-/* ปุ่มส่ง */
-button[type="submit"] {
-    background-color: #3498db; /* ปุ่มสีฟ้า */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.1em;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-
-button[type="submit"]:hover {
-    background-color: #2980b9; /* ปุ่มเมื่อ hover */
-}
-
-/* การจัดรูปแบบอื่น ๆ */
-
-/* ส่วนของ Header */
+/* การจัดการเนื้อหา */
 header {
-    background-color: #2c3e50; /* สีพื้นหลังของ header */
-    color: white;
-    padding: 20px;
-    text-align: center;
+  background-color: #3498db;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
 }
 
-/* ส่วนของ Navigation */
 nav ul {
-    list-style-type: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+  display: inline;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+  background-color: #2c3e50;
+  color: #fff;
 }
 
-/* ส่วนของ Main Content */
+/* ส่วนหลัก */
 main {
-    padding: 20px;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+  border-radius: 8px;
 }
 
 /* Footer */
 footer {
-    background-color: #2c3e50; /* สีพื้นหลังของ footer */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
 }

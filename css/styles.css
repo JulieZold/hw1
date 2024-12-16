@@ -1,0 +1,148 @@
+/* นำเข้าฟอนต์ Prompt */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap');
+
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ใช้ฟอนต์ Prompt เป็นค่าเริ่มต้น */
+body {
+  font-family: 'Prompt', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* การตั้งค่าหัวข้อ */
+h1, h2, h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* ลิงก์ */
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #2c3e50;
+}
+
+/* การจัดการเนื้อหา */
+header {
+  background-color: #3498db;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+/* เมนู Burger */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.burger .bar {
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* เมนูแนวนอน (สำหรับ desktop) */
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-menu.active {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  /* ซ่อนเมนูหลักบนหน้าจอเล็ก */
+  .nav-menu {
+    display: none;
+    width: 100%;
+    text-align: center;
+    background-color: #3498db;
+  }
+
+  /* แสดง burger bar บนอุปกรณ์เล็ก */
+  .burger {
+    display: flex;
+  }
+
+  /* จัดระเบียบลิงก์ในเมนูที่แสดง */
+  .nav-menu.active {
+    display: block;
+    padding: 15px 0;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+  }
+
+  .nav-menu ul li {
+    padding: 10px 0;
+  }
+
+  .nav-menu ul li a {
+    padding: 10px 0;
+    display: block;
+  }
+}

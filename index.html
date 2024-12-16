@@ -9,7 +9,13 @@
 <body>
   <header>
     <h1>ยินดีต้อนรับสู่ พัทยา</h1>
-    <nav>
+      <!-- เพิ่มเมนู Burger -->
+      <div class="burger" onclick="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <nav id="nav-menu" class="nav-menu">
       <ul>
         <li><a href="index.html">หน้าหลัก</a></li>
         <li><a href="details.html">สถานที่ท่องเที่ยว</a></li>
@@ -77,5 +83,12 @@
   <footer>
     <p>© 2024 แนะนำโดย ชัญญานุช</p>
   </footer>
+   <!-- สคริปต์สำหรับเปิดปิดเมนู burger -->
+   <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>

@@ -34,6 +34,37 @@ header h1 {
   text-align: center;
 }
 
+/* กำหนดความสูงของ header */
+header {
+  display: flex;
+  justify-content: center; /* จัดข้อความกลางแนวนอน */
+  align-items: center; /* จัดข้อความกลางแนวตั้ง */
+  height: 150px; /* กำหนดความสูงของ header */
+  background-color: #3498db; /* สีพื้นหลังเพื่อให้เห็นพื้นที่ของ header */
+}
+
+/* เพิ่ม animation ให้กับข้อความใน header */
+h1 {
+  animation: moveText 3s infinite alternate; /* เรียกใช้งาน animation */
+  margin: 0; /* เอา margin ออก */
+}
+
+/* กำหนด keyframes สำหรับการเคลื่อนไหว */
+@keyframes moveText {
+  0% {
+    transform: translateY(0); /* เริ่มต้นที่ตำแหน่งเดิม */
+    opacity: 1; /* ความทึบของข้อความ */
+  }
+  50% {
+    transform: translateY(-10px); /* ขยับขึ้นไป 10px */
+    opacity: 0.8; /* ลดความทึบเล็กน้อย */
+  }
+  100% {
+    transform: translateY(0); /* กลับสู่ตำแหน่งเดิม */
+    opacity: 1; /* คืนค่าความทึบกลับมาที่ 100% */
+  }
+}
+
 /* เมนู */
 nav {
   display: flex;

@@ -35,24 +35,63 @@ header h1 {
 }
 
 /* เมนู */
-nav ul {
-  list-style: none;
-  padding: 0;
+nav {
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+/* เมนูในหน้าจอปกติ */
+.nav-list {
+  display: flex;
+  list-style: none;
   gap: 15px;
 }
 
-nav ul li a {
+.nav-list li a {
   color: white;
   font-weight: 500;
   padding: 10px 15px;
+  text-decoration: none;
   border-radius: 5px;
-  text-decoration: none; /* เพิ่มบรรทัดนี้เพื่อไม่ให้มีเส้นใต้ */
 }
 
-nav ul li a:hover {
+.nav-list li a:hover {
   background-color: #2c3e50;
+}
+
+/* เมนู burger bar */
+.menu-toggle {
+  display: none; /* ซ่อน burger bar ในหน้าจอปกติ */
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* เมนูเมื่อเปิด */
+.nav-list.active {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 70px; /* อยู่ใต้ header */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  padding: 15px 20px;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
 }
 
 /* ส่วนหลัก */
@@ -97,54 +136,20 @@ footer p {
   max-width: 1200px;
 }
 
-/* เมนู Burger Bar */
-.burger {
-  display: none; /* ซ่อนเมนูในหน้าจอปกติ */
-  cursor: pointer;
-}
-
-.burger .bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  background-color: white;
-}
-
-.nav-menu {
-  display: none; /* ซ่อนเมนูในหน้าจอปกติ */
-}
-
-.nav-menu.active {
-  display: flex; /* แสดงเมนูเมื่อเปิด */
-  flex-direction: column;
-  text-align: center;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
+  /* แสดงเมนู burger bar เมื่อขนาดหน้าจอเล็กลง */
+  .menu-toggle {
+    display: flex;
   }
 
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
-
-  .burger {
-    display: block; /* แสดง burger bar */
-  }
-
-  .nav-menu {
+  /* ซ่อนเมนูแบบปกติเมื่อหน้าจอเล็ก */
+  .nav-list {
     display: none;
   }
 
-  .nav-menu.active {
-    display: block; /* แสดงเมนูเมื่อคลิก burger bar */
+  /* แสดงเมนูเมื่อคลิก burger bar */
+  .nav-list.active {
+    display: flex;
   }
 }

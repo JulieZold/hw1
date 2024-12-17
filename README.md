@@ -1,2 +1,89 @@
-# hw1
-1234
+# hw1-66160021
+
+- git add index.html
+- git add contact.html
+- git add details.html
+- git add css/styles.css
+- git commit -m "add"
+- git push
+- git checkout -b development
+- git checkout -b feature/homepage
+- git add .
+- git commit -m "add home"
+- git add .
+- git commit -m "edit information"
+- git add .
+- git commit -m "add information"
+- git add .
+- git commit -m "ใส่รูปสวนนงนุช"
+- git add .
+- git commit -m "ใส่รูปสวนนงนุช"
+- git add .
+- git commit -m "แก้ตัวอักษร"
+- git add .
+- git commit -m "เพิ่มรูปสวนน้ำรามายณะ"
+- git add .
+- git commit -m "เพิ่มรถบัส"
+- git add .
+- git commit -m "add underwater world image"
+- git add .
+- git commit -m "add oasis spa image"
+- git add .
+- git commit -m "add oasis spa image"
+- git add .
+- git commit -m "edit oasis spa image"
+- git add .
+- git commit -m "add css"
+- git add .
+- git commit -m "edit header"
+- git add .
+- git commit -m "add deatails"
+- git add .
+- git commit -m "add text details"
+- git add .
+- git commit -m "add form"
+- git add .
+- git commit -m "add contact form"
+- git add .
+- git commit -m "edit header"
+- git add .
+- git commit -m "add form layout"
+- git add .
+- git commit -m "edit bg color"
+- git add .
+- git commit -m "edit css layout"
+- git add .
+- git commit -m "edit copy"
+- git add .
+- git commit -m "edit font header"
+- git add .
+- git commit -m "add burger bar"
+- git add .
+- git commit -m "edit font"
+- git add .
+- git commit -m "edit font again"
+- git add .
+- git commit -m "edit1234"
+- git add .
+- git commit -m "change style"
+- git add .
+- git commit -m "change styles"
+- git add .
+- git commit -m "edit header footer"
+- git add .
+- git commit -m "change st"
+- git add .
+- git commit -m "edit"
+- git add .
+- git commit -m "change bgb"
+- git add .
+- git commit -m "edit"
+- git add .
+- git commit -m "add header animation"
+- git add .
+- git commit -m "edit bgb"
+- git branch
+- git checkout development
+- git merge feature/hamepage
+- git status
+- git push origin development

@@ -97,6 +97,30 @@ footer p {
   max-width: 1200px;
 }
 
+/* เมนู Burger Bar */
+.burger {
+  display: none; /* ซ่อนเมนูในหน้าจอปกติ */
+  cursor: pointer;
+}
+
+.burger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: white;
+}
+
+.nav-menu {
+  display: none; /* ซ่อนเมนูในหน้าจอปกติ */
+}
+
+.nav-menu.active {
+  display: flex; /* แสดงเมนูเมื่อเปิด */
+  flex-direction: column;
+  text-align: center;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   nav ul {
@@ -106,5 +130,21 @@ footer p {
 
   h1 {
     font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .burger {
+    display: block; /* แสดง burger bar */
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: block; /* แสดงเมนูเมื่อคลิก burger bar */
   }
 }

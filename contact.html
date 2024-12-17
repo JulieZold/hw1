@@ -8,21 +8,21 @@
 </head>
 <body>
   <header>
-    <h1>ยินดีต้อนรับสู่ พัทยา</h1>
-      <!-- เพิ่มเมนู Burger -->
-      <div class="burger" onclick="toggleMenu()">
+    <h1>Welcome to Pattaya</h1>
+    <nav>
+      <div class="menu-toggle" id="mobile-menu" onclick="toggleMenu()">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
-    <nav id="nav-menu" class="nav-menu">
-      <ul>
+      <ul class="nav-list" id="nav-menu">
         <li><a href="index.html">หน้าหลัก</a></li>
         <li><a href="details.html">สถานที่ท่องเที่ยว</a></li>
         <li><a href="contact.html">ติดต่อเรา</a></li>
       </ul>
     </nav>
   </header>
+  
 
  <main>
  <section id="about" class="section">
@@ -84,12 +84,11 @@
          </form>
 </article>
 
- <!-- สคริปต์สำหรับเปิดปิดเมนู burger -->
- <script>
-    function toggleMenu() {
-      const menu = document.getElementById('nav-menu');
-      menu.classList.toggle('active');
-    }
-  </script>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('nav-menu');
+    menu.classList.toggle('active');
+  }
+</script>
 </body>
 </html>

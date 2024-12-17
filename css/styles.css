@@ -46,7 +46,7 @@ a:hover {
   color: #2c3e50;
 }
 
-/* การจัดการเนื้อหา */
+/* การจัดการ Header */
 header {
   background-color: #3498db;
   color: white;
@@ -54,28 +54,78 @@ header {
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
+header nav {
+  position: relative;
+}
+
+.menu-toggle {
+  display: none; /* ซ่อน burger bar ในหน้าจอใหญ่ */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  background-color: white; /* สีของ bar */
+  height: 3px;
+  margin: 5px 0;
+  width: 25px;
+  transition: 0.3s;
+}
+
+/* การตั้งค่าเมนู */
+.nav-list {
   display: flex;
-  justify-content: center;
+  list-style: none;
   gap: 15px;
 }
 
-nav ul li {
-  display: inline;
-}
-
-nav ul li a {
+.nav-list li a {
   color: white;
   font-weight: 500;
   padding: 10px 15px;
   border-radius: 5px;
 }
 
-nav ul li a:hover {
+.nav-list li a:hover {
   background-color: #2c3e50;
   color: #fff;
+}
+
+/* เมนูแบบ responsive */
+.nav-list.active {
+  display: flex; /* แสดงเมนูเมื่อกด burger */
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #3498db;
+  width: 100%;
+  text-align: center;
+  border-top: 2px solid #2c3e50;
+  padding: 15px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* แสดง burger bar ในหน้าจอเล็ก */
+  }
+
+  .nav-list {
+    display: none; /* ซ่อนเมนูไว้ก่อนในหน้าจอเล็ก */
+  }
+
+  .nav-list li {
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
 }
 
 /* ส่วนหลัก */
@@ -101,7 +151,7 @@ section img {
 
 /* Footer */
 footer {
-  background-color: #2c3e50;
+  background-color:#3498db;
   color: white;
   text-align: center;
   padding: 15px 0;
@@ -110,20 +160,4 @@ footer {
 
 footer p {
   font-size: 0.9em;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
 }

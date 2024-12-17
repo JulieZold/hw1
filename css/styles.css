@@ -117,13 +117,23 @@ nav {
   position: absolute;
   top: 70px; /* อยู่ใต้ header */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(0.9); /* ทำให้ขนาดเล็กก่อนแล้วค่อยๆ ขยาย */
   background-color: #3498db;
   padding: 15px 20px;
   border-radius: 8px;
   width: 200px;
   text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+  opacity: 0; /* เริ่มต้นที่ความโปร่งใส 0 */
+  transition: all 0.3s ease; /* ทำให้ทุกการเปลี่ยนแปลงเกิดขึ้นอย่างค่อยเป็นค่อยไป */
 }
+
+/* เมื่อเมนูเปิด */
+.nav-list.active.show {
+  transform: translateX(-50%) scale(1); /* ขยายให้เป็นขนาดปกติ */
+  opacity: 1; /* ทำให้มองเห็น */
+}
+
 
 /* ส่วนหลัก */
 main {
